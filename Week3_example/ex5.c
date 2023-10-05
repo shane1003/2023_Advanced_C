@@ -34,14 +34,6 @@ int main(void) {
 
         else if (!strcmp(input1, "Start")) {
             int* deck = Shuffle();
-            /*
-            int* user = Initialization_user(deck);
-            card_idx += 2;
-            user_card_cnt += 2;
-            int* dealer = Initialization_dealer(deck);
-            card_idx += 2;
-            dealer_card_cnt += 2;
-            */
             int* user = NULL;
             int* dealer = NULL;
             Initialization(&user, &dealer, deck);
@@ -72,7 +64,6 @@ int main(void) {
                 }
                 else if (!strcmp(input2, "Stay")) {
                     while (card_sum(dealer, dealer_card_cnt) < 17) {
-                        printf("Dealer Card Sum : %d\n", card_sum(dealer, dealer_card_cnt));
                         dealer = End(&dealer, deck, card_idx, dealer_card_cnt);
                         card_idx++;
                         dealer_card_cnt++;
