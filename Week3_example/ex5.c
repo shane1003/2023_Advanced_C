@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define _CRTDBG_MAP_ALLOC //¸Ş¸ğ¸® ´©¼ö È®ÀÎÀ» À§ÇØ Á¤ÀÇ
+#define _CRTDBG_MAP_ALLOC //ë©”ëª¨ë¦¬ ëˆ„ìˆ˜ í™•ì¸ì„ ìœ„í•´ ì •ì˜
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <crtdbg.h> //¸Ş¸ğ¸® ´©¼ö È®ÀÎÀ» À§ÇÑ Çì´õ ¼±¾ğ
+#include <crtdbg.h> //ë©”ëª¨ë¦¬ ëˆ„ìˆ˜ í™•ì¸ì„ ìœ„í•œ í—¤ë” ì„ ì–¸
 
 int* Shuffle();
 int* Initialization_user(int*);
@@ -99,7 +99,7 @@ int main(void) {
             printf("Error: Wrong Input, Try Again.\n");
     }
     printf("==============================\n");
-    _CrtDumpMemoryLeaks(); //¸Ş¸ğ¸® ´©¼ö °¨Áö¸¦ À§ÇÑ ÇÔ¼ö
+    _CrtDumpMemoryLeaks(); //ë©”ëª¨ë¦¬ ëˆ„ìˆ˜ ê°ì§€ë¥¼ ìœ„í•œ í•¨ìˆ˜
     return 0;
 }
 
@@ -108,10 +108,10 @@ int* Shuffle() {
 
     int* deck = malloc(sizeof(int) * 20);
 
-    int card_check[14] = { 0,0,0,0,0,0,0,0,0,0,0,0,0 }; //°¢ index º°·Î Ä«µåÀÇ °¹¼ö ÀÇ¹Ì Â÷·Ê´ë·Î A~K
+    int card_check[14] = { 0,0,0,0,0,0,0,0,0,0,0,0,0 }; //ê° index ë³„ë¡œ ì¹´ë“œì˜ ê°¯ìˆ˜ ì˜ë¯¸ ì°¨ë¡€ëŒ€ë¡œ A~K
 
     for (int i = 0; i < 20; i++) {
-        //³­¼ö ¹ß»ı ½Ã Ä«µå 4Àå ÀÌ»ó ¸¸µéÁö ¾Ê±â À§ÇÑ loop¹®
+        //ë‚œìˆ˜ ë°œìƒ ì‹œ ì¹´ë“œ 4ì¥ ì´ìƒ ë§Œë“¤ì§€ ì•Šê¸° ìœ„í•œ loopë¬¸
         while (1) {
             int card = rand() % 13 + 1;
             //printf("%d ", card);
